@@ -1,0 +1,1932 @@
+From 16bd916ca960ef093c0f38336575798bcc1d7835 Mon Sep 17 00:00:00 2001
+From: vishu <vishu@Vishul>
+Date: 16-Aug-2023, 12:59:03 am
+
+
+
+diff --git a/pom.xml b/pom.xml
+new file mode 100644
+index 0000000..8358e07
+--- /dev/null
++++ b/pom.xml
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++    <groupId>com.mycompany</groupId>
++    <artifactId>GGame</artifactId>
++    <version>1.0-SNAPSHOT</version>
++    <packaging>jar</packaging>
++    <properties>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++        <maven.compiler.source>20</maven.compiler.source>
++        <maven.compiler.target>20</maven.compiler.target>
++        <exec.mainClass>com.mycompany.ggame.GGame</exec.mainClass>
++    </properties>
++</project>
+\ No newline at end of file
+diff --git a/src/main/java/com/mycompany/ggame/GGame.java b/src/main/java/com/mycompany/ggame/GGame.java
+new file mode 100644
+index 0000000..2ce78ff
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/GGame.java
+@@ -0,0 +1,17 @@
++/*
++ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
++ */
++
++package com.mycompany.ggame;
++
++/**
++ *
++ * @author vishu
++ */
++public class GGame {
++     
++
++    public static void main(String[] args) {
++        System.out.println("Hello World!");
++    }
++}
+diff --git a/src/main/java/com/mycompany/ggame/Play.form b/src/main/java/com/mycompany/ggame/Play.form
+new file mode 100644
+index 0000000..24698bb
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/Play.form
+@@ -0,0 +1,223 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++
++<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
++  <Properties>
++    <Property name="defaultCloseOperation" type="int" value="3"/>
++  </Properties>
++  <SyntheticProperties>
++    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
++    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
++  </SyntheticProperties>
++  <AuxValues>
++    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
++    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
++    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
++    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
++    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
++  </AuxValues>
++
++  <Layout>
++    <DimensionLayout dim="0">
++      <Group type="103" groupAlignment="0" attributes="0">
++          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
++      </Group>
++    </DimensionLayout>
++    <DimensionLayout dim="1">
++      <Group type="103" groupAlignment="0" attributes="0">
++          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
++      </Group>
++    </DimensionLayout>
++  </Layout>
++  <SubComponents>
++    <Container class="javax.swing.JPanel" name="jPanel1">
++      <Properties>
++        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++          <Color blue="0" green="ff" red="99" type="rgb"/>
++        </Property>
++      </Properties>
++
++      <Layout>
++        <DimensionLayout dim="0">
++          <Group type="103" groupAlignment="1" attributes="0">
++              <Group type="102" attributes="0">
++                  <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
++                  <Group type="103" groupAlignment="1" attributes="0">
++                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
++                      <Group type="102" alignment="1" attributes="0">
++                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
++                      </Group>
++                  </Group>
++                  <EmptySpace max="32767" attributes="0"/>
++                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace max="-2" attributes="0"/>
++              </Group>
++              <Group type="102" alignment="1" attributes="0">
++                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
++                  <Component id="attempt" min="-2" pref="133" max="-2" attributes="0"/>
++                  <EmptySpace max="-2" attributes="0"/>
++                  <Component id="attempt1" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace max="32767" attributes="0"/>
++                  <Component id="score" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace max="-2" attributes="0"/>
++                  <Component id="score1" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
++              </Group>
++              <Group type="102" alignment="0" attributes="0">
++                  <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
++                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
++                      <Component id="sysNo" max="32767" attributes="0"/>
++                      <Group type="102" attributes="0">
++                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
++                          <Component id="guessTxt" min="-2" pref="162" max="-2" attributes="0"/>
++                      </Group>
++                  </Group>
++                  <EmptySpace pref="143" max="32767" attributes="0"/>
++              </Group>
++          </Group>
++        </DimensionLayout>
++        <DimensionLayout dim="1">
++          <Group type="103" groupAlignment="0" attributes="0">
++              <Group type="102" alignment="0" attributes="0">
++                  <Group type="103" groupAlignment="0" attributes="0">
++                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
++                      <Group type="102" alignment="0" attributes="0">
++                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
++                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
++                      </Group>
++                  </Group>
++                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
++                  <Group type="103" groupAlignment="3" attributes="0">
++                      <Component id="attempt" alignment="3" min="-2" max="-2" attributes="0"/>
++                      <Component id="attempt1" alignment="3" min="-2" max="-2" attributes="0"/>
++                      <Component id="score1" alignment="3" min="-2" max="-2" attributes="0"/>
++                      <Component id="score" alignment="1" min="-2" pref="15" max="-2" attributes="0"/>
++                  </Group>
++                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
++                  <Group type="103" groupAlignment="3" attributes="0">
++                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
++                      <Component id="guessTxt" alignment="3" min="-2" max="-2" attributes="0"/>
++                  </Group>
++                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
++                  <Component id="sysNo" min="-2" pref="55" max="-2" attributes="0"/>
++                  <EmptySpace pref="77" max="32767" attributes="0"/>
++                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
++              </Group>
++          </Group>
++        </DimensionLayout>
++      </Layout>
++      <SubComponents>
++        <Component class="javax.swing.JLabel" name="jLabel1">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Calibri" size="24" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="ff" green="0" red="0" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Guessing Number Game"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JLabel" name="jLabel2">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="18" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="0" red="99" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Enter Your Number :"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JTextField" name="guessTxt">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="16" style="1"/>
++            </Property>
++          </Properties>
++          <Events>
++            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="guessTxtActionPerformed"/>
++          </Events>
++        </Component>
++        <Component class="javax.swing.JButton" name="jButton1">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="18" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="66" red="ff" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Submit"/>
++          </Properties>
++          <Events>
++            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
++            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
++          </Events>
++        </Component>
++        <Component class="javax.swing.JLabel" name="jLabel3">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="18" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="0" red="ff" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="X"/>
++          </Properties>
++          <Events>
++            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel3MouseClicked"/>
++          </Events>
++        </Component>
++        <Component class="javax.swing.JLabel" name="attempt">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="14" style="1"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Remaining Attempt:"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JLabel" name="score">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="14" style="1"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Your Score:"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JLabel" name="attempt1">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="14" style="1"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="5"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JLabel" name="score1">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="14" style="1"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="0"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JLabel" name="sysNo">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="16" style="3"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="33" red="ff" type="rgb"/>
++            </Property>
++            <Property name="horizontalAlignment" type="int" value="0"/>
++          </Properties>
++        </Component>
++      </SubComponents>
++    </Container>
++  </SubComponents>
++</Form>
+diff --git a/src/main/java/com/mycompany/ggame/Play.java b/src/main/java/com/mycompany/ggame/Play.java
+new file mode 100644
+index 0000000..af4072e
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/Play.java
+@@ -0,0 +1,278 @@
++/*
++ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
++ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
++ */
++package com.mycompany.ggame;
++
++import javax.swing.JOptionPane;
++
++/**
++ *
++ * @author vishu
++ */
++public class Play extends javax.swing.JFrame {
++
++    /**
++     * Creates new form Play
++     */
++    public Play() {
++        initComponents();
++    }
++    private String Name;
++    private int Score;
++    public Play(String name) {
++        initComponents();
++        Name=name;
++        //Score=score;
++    }
++
++    /**
++     * This method is called from within the constructor to initialize the form.
++     * WARNING: Do NOT modify this code. The content of this method is always
++     * regenerated by the Form Editor.
++     */
++    @SuppressWarnings("unchecked")
++    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
++    private void initComponents() {
++
++        jPanel1 = new javax.swing.JPanel();
++        jLabel1 = new javax.swing.JLabel();
++        jLabel2 = new javax.swing.JLabel();
++        guessTxt = new javax.swing.JTextField();
++        jButton1 = new javax.swing.JButton();
++        jLabel3 = new javax.swing.JLabel();
++        attempt = new javax.swing.JLabel();
++        score = new javax.swing.JLabel();
++        attempt1 = new javax.swing.JLabel();
++        score1 = new javax.swing.JLabel();
++        sysNo = new javax.swing.JLabel();
++
++        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
++
++        jPanel1.setBackground(new java.awt.Color(153, 255, 0));
++
++        jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
++        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
++        jLabel1.setText("Guessing Number Game");
++
++        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
++        jLabel2.setText("Enter Your Number :");
++
++        guessTxt.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
++        guessTxt.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                guessTxtActionPerformed(evt);
++            }
++        });
++
++        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jButton1.setForeground(new java.awt.Color(255, 102, 0));
++        jButton1.setText("Submit");
++        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                jButton1MouseClicked(evt);
++            }
++        });
++        jButton1.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton1ActionPerformed(evt);
++            }
++        });
++
++        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
++        jLabel3.setText("X");
++        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                jLabel3MouseClicked(evt);
++            }
++        });
++
++        attempt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
++        attempt.setText("Remaining Attempt:");
++
++        score.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
++        score.setText("Your Score:");
++
++        attempt1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
++        attempt1.setText("5");
++
++        score1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
++        score1.setText("0");
++
++        sysNo.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
++        sysNo.setForeground(new java.awt.Color(255, 51, 0));
++        sysNo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGap(201, 201, 201)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++                    .addComponent(jLabel1)
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addComponent(jButton1)
++                        .addGap(71, 71, 71)))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addComponent(jLabel3)
++                .addContainerGap())
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGap(20, 20, 20)
++                .addComponent(attempt, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(attempt1)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addComponent(score)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(score1)
++                .addGap(33, 33, 33))
++            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
++                .addGap(128, 128, 128)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
++                    .addComponent(sysNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addComponent(jLabel2)
++                        .addGap(30, 30, 30)
++                        .addComponent(guessTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
++                .addContainerGap(143, Short.MAX_VALUE))
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jLabel3)
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addGap(15, 15, 15)
++                        .addComponent(jLabel1)))
++                .addGap(1, 1, 1)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(attempt)
++                    .addComponent(attempt1)
++                    .addComponent(score1)
++                    .addComponent(score, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addGap(29, 29, 29)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel2)
++                    .addComponent(guessTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addGap(26, 26, 26)
++                .addComponent(sysNo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
++                .addComponent(jButton1)
++                .addGap(60, 60, 60))
++        );
++
++        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
++        getContentPane().setLayout(layout);
++        layout.setHorizontalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++        layout.setVerticalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++
++        pack();
++        setLocationRelativeTo(null);
++    }// </editor-fold>//GEN-END:initComponents
++
++    private void guessTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guessTxtActionPerformed
++        // TODO add your handling code here:
++    }//GEN-LAST:event_guessTxtActionPerformed
++    //private int Score;
++    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
++        // TODO add your handling code here:
++        if(guessTxt.getText().isEmpty() || Integer.parseInt(guessTxt.getText())<=0 || Integer.parseInt(guessTxt.getText())>100){
++            JOptionPane.showMessageDialog(this,"Enter Your Number between 1 to 100");
++        }else{
++            int random=(int)( Math.random()*20 + 1);
++            if(Integer.parseInt(guessTxt.getText())==random){
++                sysNo.setText("Yeah! your guess is correct!!"
++                        + " Number is "+random);
++                score1.setText((10+Integer.parseInt(score1.getText()))+"");
++            }
++            else if(Integer.parseInt(guessTxt.getText())== random+1 || Integer.parseInt(guessTxt.getText())==random-1){
++                sysNo.setText("Yeah! your guess is Too Close!!"
++                        + " Number is "+random);                
++            }
++            else {
++                sysNo.setText("Yeah! your guess is Too Far!!"
++                        + " Number is "+random);                
++            }            
++//            else{
++//                sysNo.setText("Yeah! your guess is incorrect!! Number is "+random);
++//            }
++//            if(Integer.parseInt(score.getText())>Integer.parseInt(score.getText())){
++//                b_score.setText((Integer.toString(score.getText()));
++//            }
++            guessTxt.setText("");
++            Score = Integer.parseInt(score1.getText());
++            attempt1.setText(""+(Integer.parseInt(attempt1.getText())-1));        
++            if(Integer.parseInt(attempt1.getText()) ==0){
++                 new Result(Name,Score).setVisible(true);
++                 this.dispose();
++            }
++        }
++    }//GEN-LAST:event_jButton1MouseClicked
++
++    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
++        // TODO add your handling code here:
++    }//GEN-LAST:event_jButton1ActionPerformed
++
++    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
++        // TODO add your handling code here:
++        System.exit(1);
++    }//GEN-LAST:event_jLabel3MouseClicked
++
++    /**
++     * @param args the command line arguments
++     */
++    public static void main(String args[]) {
++        /* Set the Nimbus look and feel */
++        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
++        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
++         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
++         */
++        try {
++            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
++                if ("Nimbus".equals(info.getName())) {
++                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
++                    break;
++                }
++            }
++        } catch (ClassNotFoundException ex) {
++            java.util.logging.Logger.getLogger(Play.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (InstantiationException ex) {
++            java.util.logging.Logger.getLogger(Play.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (IllegalAccessException ex) {
++            java.util.logging.Logger.getLogger(Play.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
++            java.util.logging.Logger.getLogger(Play.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        }
++        //</editor-fold>
++
++        /* Create and display the form */
++        java.awt.EventQueue.invokeLater(new Runnable() {
++            public void run() {
++                new Play().setVisible(true);
++            }
++        });
++    }
++
++    // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JLabel attempt;
++    private javax.swing.JLabel attempt1;
++    private javax.swing.JTextField guessTxt;
++    private javax.swing.JButton jButton1;
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JLabel jLabel2;
++    private javax.swing.JLabel jLabel3;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JLabel score;
++    private javax.swing.JLabel score1;
++    private javax.swing.JLabel sysNo;
++    // End of variables declaration//GEN-END:variables
++}
+diff --git a/src/main/java/com/mycompany/ggame/Result.form b/src/main/java/com/mycompany/ggame/Result.form
+new file mode 100644
+index 0000000..e4f5c4e
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/Result.form
+@@ -0,0 +1,188 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++
++<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
++  <Properties>
++    <Property name="defaultCloseOperation" type="int" value="3"/>
++    <Property name="undecorated" type="boolean" value="true"/>
++  </Properties>
++  <SyntheticProperties>
++    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
++    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
++  </SyntheticProperties>
++  <AuxValues>
++    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
++    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
++    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
++    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
++    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
++  </AuxValues>
++
++  <Layout>
++    <DimensionLayout dim="0">
++      <Group type="103" groupAlignment="0" attributes="0">
++          <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
++      </Group>
++    </DimensionLayout>
++    <DimensionLayout dim="1">
++      <Group type="103" groupAlignment="0" attributes="0">
++          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
++      </Group>
++    </DimensionLayout>
++  </Layout>
++  <SubComponents>
++    <Container class="javax.swing.JPanel" name="jPanel1">
++      <Properties>
++        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++          <Color blue="0" green="ff" red="99" type="rgb"/>
++        </Property>
++      </Properties>
++
++      <Layout>
++        <DimensionLayout dim="0">
++          <Group type="103" groupAlignment="0" attributes="0">
++              <Group type="102" alignment="1" attributes="0">
++                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
++                  <Component id="replaybtn" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace max="32767" attributes="0"/>
++                  <Component id="quitbtn" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
++              </Group>
++              <Group type="102" alignment="1" attributes="0">
++                  <EmptySpace pref="143" max="32767" attributes="0"/>
++                  <Group type="103" groupAlignment="0" attributes="0">
++                      <Group type="102" attributes="0">
++                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
++                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
++                      </Group>
++                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
++                          <Component id="msg" min="-2" pref="117" max="-2" attributes="0"/>
++                          <Group type="102" attributes="0">
++                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
++                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                              <Component id="score" min="-2" pref="21" max="-2" attributes="0"/>
++                          </Group>
++                      </Group>
++                  </Group>
++                  <EmptySpace max="-2" attributes="0"/>
++              </Group>
++          </Group>
++        </DimensionLayout>
++        <DimensionLayout dim="1">
++          <Group type="103" groupAlignment="0" attributes="0">
++              <Group type="102" alignment="0" attributes="0">
++                  <Group type="103" groupAlignment="0" attributes="0">
++                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
++                      <Group type="102" alignment="0" attributes="0">
++                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
++                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
++                          <Group type="103" groupAlignment="3" attributes="0">
++                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
++                              <Component id="score" alignment="3" min="-2" max="-2" attributes="0"/>
++                          </Group>
++                      </Group>
++                  </Group>
++                  <EmptySpace type="separate" max="-2" attributes="0"/>
++                  <Component id="msg" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace pref="45" max="32767" attributes="0"/>
++                  <Group type="103" groupAlignment="3" attributes="0">
++                      <Component id="replaybtn" alignment="3" min="-2" max="-2" attributes="0"/>
++                      <Component id="quitbtn" alignment="3" min="-2" max="-2" attributes="0"/>
++                  </Group>
++                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
++              </Group>
++          </Group>
++        </DimensionLayout>
++      </Layout>
++      <SubComponents>
++        <Component class="javax.swing.JLabel" name="jLabel1">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Calibri" size="24" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="ff" green="0" red="0" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Guessing Number Game"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JLabel" name="jLabel2">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="16" style="1"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Your Total Score : "/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JButton" name="quitbtn">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="18" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="66" red="ff" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Quit"/>
++          </Properties>
++          <Events>
++            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="quitbtnMouseClicked"/>
++            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quitbtnActionPerformed"/>
++          </Events>
++        </Component>
++        <Component class="javax.swing.JLabel" name="jLabel3">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="18" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="0" red="ff" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="X"/>
++          </Properties>
++          <Events>
++            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel3MouseClicked"/>
++          </Events>
++        </Component>
++        <Component class="javax.swing.JLabel" name="score">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="16" style="1"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value=" 0"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JButton" name="replaybtn">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="18" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="66" red="ff" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Replay"/>
++          </Properties>
++          <Events>
++            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="replaybtnMouseClicked"/>
++            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="replaybtnActionPerformed"/>
++          </Events>
++        </Component>
++        <Component class="javax.swing.JLabel" name="msg">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="16" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="33" red="ff" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="WELL PLAYED!!"/>
++          </Properties>
++        </Component>
++      </SubComponents>
++    </Container>
++  </SubComponents>
++</Form>
+diff --git a/src/main/java/com/mycompany/ggame/Result.java b/src/main/java/com/mycompany/ggame/Result.java
+new file mode 100644
+index 0000000..4624210
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/Result.java
+@@ -0,0 +1,246 @@
++/*
++ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
++ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
++ */
++package com.mycompany.ggame;
++
++/**
++ *
++ * @author vishu
++ */
++public class Result extends javax.swing.JFrame {
++
++    /**
++     * Creates new form Result
++     */
++    public Result() {
++        initComponents();
++    }
++    private String Name;
++    private int Score;
++    public Result(String name,int score) {
++        initComponents();
++        Name=name;
++        Score=score;
++        displayMessage();        
++    }
++
++    
++    private void displayMessage(){
++        score.setText(""+Score);
++        if(Score==2000){
++            msg.setText("Perfect!!");
++        }
++        else if(Score>0){
++            msg.setText("Well Played!!");
++        }else{
++            msg.setText("Better Luck Next Time!!");
++        }
++    }
++
++    /**
++     * This method is called from within the constructor to initialize the form.
++     * WARNING: Do NOT modify this code. The content of this method is always
++     * regenerated by the Form Editor.
++     */
++    @SuppressWarnings("unchecked")
++    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
++    private void initComponents() {
++
++        jPanel1 = new javax.swing.JPanel();
++        jLabel1 = new javax.swing.JLabel();
++        jLabel2 = new javax.swing.JLabel();
++        quitbtn = new javax.swing.JButton();
++        jLabel3 = new javax.swing.JLabel();
++        score = new javax.swing.JLabel();
++        replaybtn = new javax.swing.JButton();
++        msg = new javax.swing.JLabel();
++
++        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
++        setUndecorated(true);
++
++        jPanel1.setBackground(new java.awt.Color(153, 255, 0));
++
++        jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
++        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
++        jLabel1.setText("Guessing Number Game");
++
++        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
++        jLabel2.setText("Your Total Score : ");
++
++        quitbtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        quitbtn.setForeground(new java.awt.Color(255, 102, 0));
++        quitbtn.setText("Quit");
++        quitbtn.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                quitbtnMouseClicked(evt);
++            }
++        });
++        quitbtn.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                quitbtnActionPerformed(evt);
++            }
++        });
++
++        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
++        jLabel3.setText("X");
++        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                jLabel3MouseClicked(evt);
++            }
++        });
++
++        score.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
++        score.setText(" 0");
++
++        replaybtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        replaybtn.setForeground(new java.awt.Color(255, 102, 0));
++        replaybtn.setText("Replay");
++        replaybtn.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                replaybtnMouseClicked(evt);
++            }
++        });
++        replaybtn.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                replaybtnActionPerformed(evt);
++            }
++        });
++
++        msg.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
++        msg.setForeground(new java.awt.Color(255, 51, 0));
++        msg.setText("WELL PLAYED!!");
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
++                .addGap(47, 47, 47)
++                .addComponent(replaybtn)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addComponent(quitbtn)
++                .addGap(41, 41, 41))
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
++                .addContainerGap(143, Short.MAX_VALUE)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addComponent(jLabel1)
++                        .addGap(93, 93, 93)
++                        .addComponent(jLabel3))
++                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++                        .addComponent(msg, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addGroup(jPanel1Layout.createSequentialGroup()
++                            .addComponent(jLabel2)
++                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                            .addComponent(score, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))))
++                .addContainerGap())
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jLabel3)
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addGap(15, 15, 15)
++                        .addComponent(jLabel1)
++                        .addGap(35, 35, 35)
++                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                            .addComponent(jLabel2)
++                            .addComponent(score))))
++                .addGap(18, 18, 18)
++                .addComponent(msg)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(replaybtn)
++                    .addComponent(quitbtn))
++                .addGap(34, 34, 34))
++        );
++
++        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
++        getContentPane().setLayout(layout);
++        layout.setHorizontalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++        layout.setVerticalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++
++        pack();
++        setLocationRelativeTo(null);
++    }// </editor-fold>//GEN-END:initComponents
++
++    private void quitbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quitbtnMouseClicked
++        // TODO add your handling code here:
++        System.exit(0);
++    }//GEN-LAST:event_quitbtnMouseClicked
++
++    private void quitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitbtnActionPerformed
++        // TODO add your handling code here:
++      
++    }//GEN-LAST:event_quitbtnActionPerformed
++
++    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
++        // TODO add your handling code here:
++        System.exit(1);
++    }//GEN-LAST:event_jLabel3MouseClicked
++
++    private void replaybtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_replaybtnMouseClicked
++        // TODO add your handling code here:
++        new Rules(Name).setVisible(true);
++        this.dispose();
++    }//GEN-LAST:event_replaybtnMouseClicked
++
++    private void replaybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_replaybtnActionPerformed
++        // TODO add your handling code here:
++    }//GEN-LAST:event_replaybtnActionPerformed
++
++    /**
++     * @param args the command line arguments
++     */
++    public static void main(String args[]) {
++        /* Set the Nimbus look and feel */
++        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
++        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
++         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
++         */
++        try {
++            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
++                if ("Nimbus".equals(info.getName())) {
++                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
++                    break;
++                }
++            }
++        } catch (ClassNotFoundException ex) {
++            java.util.logging.Logger.getLogger(Result.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (InstantiationException ex) {
++            java.util.logging.Logger.getLogger(Result.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (IllegalAccessException ex) {
++            java.util.logging.Logger.getLogger(Result.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
++            java.util.logging.Logger.getLogger(Result.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        }
++        //</editor-fold>
++
++        /* Create and display the form */
++        java.awt.EventQueue.invokeLater(new Runnable() {
++            public void run() {
++                new Result().setVisible(true);
++            }
++        });
++    }
++
++    // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JLabel jLabel2;
++    private javax.swing.JLabel jLabel3;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JLabel msg;
++    private javax.swing.JButton quitbtn;
++    private javax.swing.JButton replaybtn;
++    private javax.swing.JLabel score;
++    // End of variables declaration//GEN-END:variables
++}
+diff --git a/src/main/java/com/mycompany/ggame/Rules.form b/src/main/java/com/mycompany/ggame/Rules.form
+new file mode 100644
+index 0000000..618df6c
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/Rules.form
+@@ -0,0 +1,260 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++
++<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
++  <Properties>
++    <Property name="defaultCloseOperation" type="int" value="3"/>
++  </Properties>
++  <SyntheticProperties>
++    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
++    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
++  </SyntheticProperties>
++  <AuxValues>
++    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
++    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
++    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
++    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
++    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
++  </AuxValues>
++
++  <Layout>
++    <DimensionLayout dim="0">
++      <Group type="103" groupAlignment="0" attributes="0">
++          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
++      </Group>
++    </DimensionLayout>
++    <DimensionLayout dim="1">
++      <Group type="103" groupAlignment="0" attributes="0">
++          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
++      </Group>
++    </DimensionLayout>
++  </Layout>
++  <SubComponents>
++    <Container class="javax.swing.JPanel" name="jPanel1">
++
++      <Layout>
++        <DimensionLayout dim="0">
++          <Group type="103" groupAlignment="0" attributes="0">
++              <Group type="102" alignment="0" attributes="0">
++                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
++              </Group>
++          </Group>
++        </DimensionLayout>
++        <DimensionLayout dim="1">
++          <Group type="103" groupAlignment="0" attributes="0">
++              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
++          </Group>
++        </DimensionLayout>
++      </Layout>
++      <SubComponents>
++        <Container class="javax.swing.JPanel" name="jPanel2">
++          <Properties>
++            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="ff" red="99" type="rgb"/>
++            </Property>
++          </Properties>
++
++          <Layout>
++            <DimensionLayout dim="0">
++              <Group type="103" groupAlignment="0" attributes="0">
++                  <Group type="102" alignment="1" attributes="0">
++                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
++                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
++                      <EmptySpace max="32767" attributes="0"/>
++                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
++                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
++                  </Group>
++                  <Group type="102" attributes="0">
++                      <Group type="103" groupAlignment="1" attributes="0">
++                          <Group type="102" attributes="0">
++                              <EmptySpace min="-2" pref="229" max="-2" attributes="0"/>
++                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
++                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
++                          </Group>
++                          <Group type="102" alignment="0" attributes="0">
++                              <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
++                              <Group type="103" groupAlignment="0" attributes="0">
++                                  <Group type="102" attributes="0">
++                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
++                                      <EmptySpace max="32767" attributes="0"/>
++                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
++                                  </Group>
++                                  <Group type="102" attributes="0">
++                                      <Group type="103" groupAlignment="0" attributes="0">
++                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
++                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
++                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
++                                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
++                                      </Group>
++                                      <EmptySpace min="0" pref="79" max="32767" attributes="0"/>
++                                  </Group>
++                              </Group>
++                          </Group>
++                      </Group>
++                      <EmptySpace max="-2" attributes="0"/>
++                  </Group>
++                  <Group type="102" attributes="0">
++                      <EmptySpace max="32767" attributes="0"/>
++                      <Component id="nameTxt" min="-2" pref="169" max="-2" attributes="0"/>
++                      <EmptySpace max="32767" attributes="0"/>
++                  </Group>
++              </Group>
++            </DimensionLayout>
++            <DimensionLayout dim="1">
++              <Group type="103" groupAlignment="0" attributes="0">
++                  <Group type="102" alignment="0" attributes="0">
++                      <Group type="103" groupAlignment="3" attributes="0">
++                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
++                          <Component id="jLabel1" alignment="3" pref="32" max="32767" attributes="0"/>
++                      </Group>
++                      <EmptySpace max="-2" attributes="0"/>
++                      <Component id="nameTxt" min="-2" max="-2" attributes="0"/>
++                      <EmptySpace max="-2" attributes="0"/>
++                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
++                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
++                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
++                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
++                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
++                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
++                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
++                      <EmptySpace pref="40" max="32767" attributes="0"/>
++                      <Group type="103" groupAlignment="3" attributes="0">
++                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
++                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
++                      </Group>
++                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
++                  </Group>
++              </Group>
++            </DimensionLayout>
++          </Layout>
++          <SubComponents>
++            <Component class="javax.swing.JLabel" name="jLabel1">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Calibri" size="24" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="ff" green="0" red="0" type="rgb"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="Guessing Number Game"/>
++              </Properties>
++            </Component>
++            <Component class="javax.swing.JLabel" name="nameTxt">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="16" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="0" green="0" red="ff" type="rgb"/>
++                </Property>
++                <Property name="horizontalAlignment" type="int" value="0"/>
++              </Properties>
++            </Component>
++            <Component class="javax.swing.JButton" name="jButton1">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="18" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="0" green="66" red="ff" type="rgb"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="NEXT"/>
++              </Properties>
++              <Events>
++                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
++                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
++              </Events>
++            </Component>
++            <Component class="javax.swing.JLabel" name="jLabel3">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="18" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="0" green="0" red="ff" type="rgb"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="X"/>
++              </Properties>
++              <Events>
++                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel3MouseClicked"/>
++              </Events>
++            </Component>
++            <Component class="javax.swing.JButton" name="jButton2">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="18" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="0" green="66" red="ff" type="rgb"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="BACK"/>
++              </Properties>
++              <Events>
++                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2MouseClicked"/>
++                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
++              </Events>
++            </Component>
++            <Component class="javax.swing.JLabel" name="jLabel4">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="16" style="3"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="RULES"/>
++              </Properties>
++            </Component>
++            <Component class="javax.swing.JLabel" name="jLabel5">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="12" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="cc" green="0" red="cc" type="rgb"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="1. You will be given 5 chances to play."/>
++              </Properties>
++            </Component>
++            <Component class="javax.swing.JLabel" name="jLabel6">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="12" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="cc" green="0" red="cc" type="rgb"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="2. On each correct guess you will be awarded 10 points."/>
++              </Properties>
++            </Component>
++            <Component class="javax.swing.JLabel" name="jLabel7">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="12" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="cc" green="0" red="cc" type="rgb"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="3. On each incorrect guess you will be awarded  no points."/>
++              </Properties>
++            </Component>
++            <Component class="javax.swing.JLabel" name="jLabel8">
++              <Properties>
++                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++                  <Font name="Segoe UI" size="12" style="1"/>
++                </Property>
++                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++                  <Color blue="cc" green="0" red="cc" type="rgb"/>
++                </Property>
++                <Property name="text" type="java.lang.String" value="4. Number to be guessed must lie in between 1 to 100."/>
++              </Properties>
++            </Component>
++          </SubComponents>
++        </Container>
++      </SubComponents>
++    </Container>
++  </SubComponents>
++</Form>
+diff --git a/src/main/java/com/mycompany/ggame/Rules.java b/src/main/java/com/mycompany/ggame/Rules.java
+new file mode 100644
+index 0000000..8d19460
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/Rules.java
+@@ -0,0 +1,285 @@
++/*
++ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
++ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
++ */
++package com.mycompany.ggame;
++
++import javax.swing.JOptionPane;
++
++/**
++ *
++ * @author vishu
++ */
++public class Rules extends javax.swing.JFrame {
++
++    /**
++     * Creates new form Rules
++     */
++    public Rules() {
++        initComponents();
++    }
++    private String Name;
++    public Rules(String name) {
++        initComponents();
++        Name=name;
++        displayName();
++    }
++    private void displayName(){
++        nameTxt.setText("Welcome "+Name);
++    }
++    
++
++    /**
++     * This method is called from within the constructor to initialize the form.
++     * WARNING: Do NOT modify this code. The content of this method is always
++     * regenerated by the Form Editor.
++     */
++    @SuppressWarnings("unchecked")
++    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
++    private void initComponents() {
++
++        jPanel1 = new javax.swing.JPanel();
++        jPanel2 = new javax.swing.JPanel();
++        jLabel1 = new javax.swing.JLabel();
++        nameTxt = new javax.swing.JLabel();
++        jButton1 = new javax.swing.JButton();
++        jLabel3 = new javax.swing.JLabel();
++        jButton2 = new javax.swing.JButton();
++        jLabel4 = new javax.swing.JLabel();
++        jLabel5 = new javax.swing.JLabel();
++        jLabel6 = new javax.swing.JLabel();
++        jLabel7 = new javax.swing.JLabel();
++        jLabel8 = new javax.swing.JLabel();
++
++        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
++
++        jPanel2.setBackground(new java.awt.Color(153, 255, 0));
++
++        jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
++        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
++        jLabel1.setText("Guessing Number Game");
++
++        nameTxt.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
++        nameTxt.setForeground(new java.awt.Color(255, 0, 0));
++        nameTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
++
++        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jButton1.setForeground(new java.awt.Color(255, 102, 0));
++        jButton1.setText("NEXT");
++        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                jButton1MouseClicked(evt);
++            }
++        });
++        jButton1.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton1ActionPerformed(evt);
++            }
++        });
++
++        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
++        jLabel3.setText("X");
++        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                jLabel3MouseClicked(evt);
++            }
++        });
++
++        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jButton2.setForeground(new java.awt.Color(255, 102, 0));
++        jButton2.setText("BACK");
++        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                jButton2MouseClicked(evt);
++            }
++        });
++        jButton2.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton2ActionPerformed(evt);
++            }
++        });
++
++        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
++        jLabel4.setText("RULES");
++
++        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
++        jLabel5.setForeground(new java.awt.Color(204, 0, 204));
++        jLabel5.setText("1. You will be given 5 chances to play.");
++
++        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
++        jLabel6.setForeground(new java.awt.Color(204, 0, 204));
++        jLabel6.setText("2. On each correct guess you will be awarded 10 points.");
++
++        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
++        jLabel7.setForeground(new java.awt.Color(204, 0, 204));
++        jLabel7.setText("3. On each incorrect guess you will be awarded  no points.");
++
++        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
++        jLabel8.setForeground(new java.awt.Color(204, 0, 204));
++        jLabel8.setText("4. Number to be guessed must lie in between 1 to 100.");
++
++        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
++        jPanel2.setLayout(jPanel2Layout);
++        jPanel2Layout.setHorizontalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
++                .addGap(42, 42, 42)
++                .addComponent(jButton2)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addComponent(jButton1)
++                .addGap(26, 26, 26))
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++                    .addGroup(jPanel2Layout.createSequentialGroup()
++                        .addGap(229, 229, 229)
++                        .addComponent(jLabel4)
++                        .addGap(0, 0, Short.MAX_VALUE))
++                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
++                        .addGap(148, 148, 148)
++                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                            .addGroup(jPanel2Layout.createSequentialGroup()
++                                .addComponent(jLabel1)
++                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                                .addComponent(jLabel3))
++                            .addGroup(jPanel2Layout.createSequentialGroup()
++                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                                    .addComponent(jLabel7)
++                                    .addComponent(jLabel8)
++                                    .addComponent(jLabel6)
++                                    .addComponent(jLabel5))
++                                .addGap(0, 79, Short.MAX_VALUE)))))
++                .addContainerGap())
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addComponent(nameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++        );
++        jPanel2Layout.setVerticalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel3)
++                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(nameTxt)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jLabel4)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jLabel5)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jLabel6)
++                .addGap(12, 12, 12)
++                .addComponent(jLabel7)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jLabel8)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
++                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton2)
++                    .addComponent(jButton1))
++                .addGap(38, 38, 38))
++        );
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addGap(0, 0, Short.MAX_VALUE))
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++
++        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
++        getContentPane().setLayout(layout);
++        layout.setHorizontalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++        layout.setVerticalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++
++        pack();
++        setLocationRelativeTo(null);
++    }// </editor-fold>//GEN-END:initComponents
++
++    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
++        // TODO add your handling code here:
++        new Play(Name).setVisible(true);
++        this.dispose();
++    }//GEN-LAST:event_jButton1MouseClicked
++
++    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
++        // TODO add your handling code here:
++    }//GEN-LAST:event_jButton1ActionPerformed
++
++    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
++        // TODO add your handling code here:
++        System.exit(1);
++    }//GEN-LAST:event_jLabel3MouseClicked
++
++    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
++        // TODO add your handling code here:
++        new Wlcm().setVisible(true);
++        this.dispose();
++    }//GEN-LAST:event_jButton2MouseClicked
++
++    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
++        // TODO add your handling code here:
++    }//GEN-LAST:event_jButton2ActionPerformed
++
++    /**
++     * @param args the command line arguments
++     */
++    public static void main(String args[]) {
++        /* Set the Nimbus look and feel */
++        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
++        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
++         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
++         */
++        try {
++            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
++                if ("Nimbus".equals(info.getName())) {
++                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
++                    break;
++                }
++            }
++        } catch (ClassNotFoundException ex) {
++            java.util.logging.Logger.getLogger(Rules.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (InstantiationException ex) {
++            java.util.logging.Logger.getLogger(Rules.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (IllegalAccessException ex) {
++            java.util.logging.Logger.getLogger(Rules.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
++            java.util.logging.Logger.getLogger(Rules.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        }
++        //</editor-fold>
++
++        /* Create and display the form */
++        java.awt.EventQueue.invokeLater(new Runnable() {
++            public void run() {
++                new Rules().setVisible(true);
++            }
++        });
++    }
++
++    // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JLabel jLabel3;
++    private javax.swing.JLabel jLabel4;
++    private javax.swing.JLabel jLabel5;
++    private javax.swing.JLabel jLabel6;
++    private javax.swing.JLabel jLabel7;
++    private javax.swing.JLabel jLabel8;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JPanel jPanel2;
++    private javax.swing.JLabel nameTxt;
++    // End of variables declaration//GEN-END:variables
++}
+diff --git a/src/main/java/com/mycompany/ggame/Wlcm.form b/src/main/java/com/mycompany/ggame/Wlcm.form
+new file mode 100644
+index 0000000..c01c93f
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/Wlcm.form
+@@ -0,0 +1,152 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++
++<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
++  <Properties>
++    <Property name="defaultCloseOperation" type="int" value="3"/>
++    <Property name="undecorated" type="boolean" value="true"/>
++  </Properties>
++  <SyntheticProperties>
++    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
++    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
++  </SyntheticProperties>
++  <AuxValues>
++    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
++    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
++    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
++    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
++    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
++    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
++  </AuxValues>
++
++  <Layout>
++    <DimensionLayout dim="0">
++      <Group type="103" groupAlignment="0" attributes="0">
++          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
++      </Group>
++    </DimensionLayout>
++    <DimensionLayout dim="1">
++      <Group type="103" groupAlignment="0" attributes="0">
++          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
++      </Group>
++    </DimensionLayout>
++  </Layout>
++  <SubComponents>
++    <Container class="javax.swing.JPanel" name="jPanel1">
++      <Properties>
++        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++          <Color blue="0" green="ff" red="99" type="rgb"/>
++        </Property>
++      </Properties>
++
++      <Layout>
++        <DimensionLayout dim="0">
++          <Group type="103" groupAlignment="0" attributes="0">
++              <Group type="102" attributes="0">
++                  <Group type="103" groupAlignment="0" attributes="0">
++                      <Group type="102" attributes="0">
++                          <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
++                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
++                          <Component id="nameTxt" min="-2" pref="162" max="-2" attributes="0"/>
++                      </Group>
++                      <Group type="102" alignment="0" attributes="0">
++                          <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
++                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
++                      </Group>
++                  </Group>
++                  <EmptySpace pref="87" max="32767" attributes="0"/>
++              </Group>
++              <Group type="102" alignment="1" attributes="0">
++                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
++                  <Group type="103" groupAlignment="0" attributes="0">
++                      <Group type="102" alignment="1" attributes="0">
++                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace max="-2" attributes="0"/>
++                      </Group>
++                      <Group type="102" alignment="1" attributes="0">
++                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
++                          <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
++                      </Group>
++                  </Group>
++              </Group>
++          </Group>
++        </DimensionLayout>
++        <DimensionLayout dim="1">
++          <Group type="103" groupAlignment="0" attributes="0">
++              <Group type="102" alignment="0" attributes="0">
++                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
++                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace type="separate" max="-2" attributes="0"/>
++                  <Group type="103" groupAlignment="3" attributes="0">
++                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
++                      <Component id="nameTxt" alignment="3" min="-2" max="-2" attributes="0"/>
++                  </Group>
++                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
++                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
++                  <EmptySpace pref="65" max="32767" attributes="0"/>
++              </Group>
++          </Group>
++        </DimensionLayout>
++      </Layout>
++      <SubComponents>
++        <Component class="javax.swing.JLabel" name="jLabel1">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Calibri" size="24" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="ff" green="0" red="0" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Guessing Number Game"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JLabel" name="jLabel2">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="16" style="1"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Enter Your Name"/>
++          </Properties>
++        </Component>
++        <Component class="javax.swing.JTextField" name="nameTxt">
++          <Events>
++            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nameTxtActionPerformed"/>
++          </Events>
++        </Component>
++        <Component class="javax.swing.JButton" name="jButton1">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="18" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="66" red="ff" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="Submit"/>
++          </Properties>
++          <Events>
++            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
++            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
++          </Events>
++        </Component>
++        <Component class="javax.swing.JLabel" name="jLabel3">
++          <Properties>
++            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
++              <Font name="Segoe UI" size="18" style="1"/>
++            </Property>
++            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
++              <Color blue="0" green="0" red="ff" type="rgb"/>
++            </Property>
++            <Property name="text" type="java.lang.String" value="X"/>
++          </Properties>
++          <Events>
++            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel3MouseClicked"/>
++          </Events>
++        </Component>
++      </SubComponents>
++    </Container>
++  </SubComponents>
++</Form>
+diff --git a/src/main/java/com/mycompany/ggame/Wlcm.java b/src/main/java/com/mycompany/ggame/Wlcm.java
+new file mode 100644
+index 0000000..cd25577
+--- /dev/null
++++ b/src/main/java/com/mycompany/ggame/Wlcm.java
+@@ -0,0 +1,202 @@
++/*
++ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
++ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
++ */
++package com.mycompany.ggame;
++
++import javax.swing.JOptionPane;
++
++/**
++ *
++ * @author vishu
++ */
++public class Wlcm extends javax.swing.JFrame {
++
++    /**
++     * Creates new form Wlcm
++     */
++    public Wlcm() {
++        initComponents();
++    }
++
++    /**
++     * This method is called from within the constructor to initialize the form.
++     * WARNING: Do NOT modify this code. The content of this method is always
++     * regenerated by the Form Editor.
++     */
++    @SuppressWarnings("unchecked")
++    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
++    private void initComponents() {
++
++        jPanel1 = new javax.swing.JPanel();
++        jLabel1 = new javax.swing.JLabel();
++        jLabel2 = new javax.swing.JLabel();
++        nameTxt = new javax.swing.JTextField();
++        jButton1 = new javax.swing.JButton();
++        jLabel3 = new javax.swing.JLabel();
++
++        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
++        setUndecorated(true);
++
++        jPanel1.setBackground(new java.awt.Color(153, 255, 0));
++
++        jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
++        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
++        jLabel1.setText("Guessing Number Game");
++
++        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
++        jLabel2.setText("Enter Your Name");
++
++        nameTxt.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                nameTxtActionPerformed(evt);
++            }
++        });
++
++        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jButton1.setForeground(new java.awt.Color(255, 102, 0));
++        jButton1.setText("Submit");
++        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                jButton1MouseClicked(evt);
++            }
++        });
++        jButton1.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton1ActionPerformed(evt);
++            }
++        });
++
++        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
++        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
++        jLabel3.setText("X");
++        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
++            public void mouseClicked(java.awt.event.MouseEvent evt) {
++                jLabel3MouseClicked(evt);
++            }
++        });
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addGap(99, 99, 99)
++                        .addComponent(jLabel2)
++                        .addGap(48, 48, 48)
++                        .addComponent(nameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addGap(212, 212, 212)
++                        .addComponent(jButton1)))
++                .addContainerGap(87, Short.MAX_VALUE))
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
++                .addGap(0, 0, Short.MAX_VALUE)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
++                        .addComponent(jLabel3)
++                        .addContainerGap())
++                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
++                        .addComponent(jLabel1)
++                        .addGap(136, 136, 136))))
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addComponent(jLabel3)
++                .addGap(3, 3, 3)
++                .addComponent(jLabel1)
++                .addGap(18, 18, 18)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel2)
++                    .addComponent(nameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addGap(44, 44, 44)
++                .addComponent(jButton1)
++                .addContainerGap(65, Short.MAX_VALUE))
++        );
++
++        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
++        getContentPane().setLayout(layout);
++        layout.setHorizontalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++        layout.setVerticalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++        );
++
++        pack();
++        setLocationRelativeTo(null);
++    }// </editor-fold>//GEN-END:initComponents
++
++    private void nameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTxtActionPerformed
++        // TODO add your handling code here:
++    }//GEN-LAST:event_nameTxtActionPerformed
++
++    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
++        // TODO add your handling code here:
++    }//GEN-LAST:event_jButton1ActionPerformed
++
++    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
++        // TODO add your handling code here:
++        System.exit(1);
++    }//GEN-LAST:event_jLabel3MouseClicked
++    private String Name;
++    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
++        // TODO add your handling code here:
++        if(nameTxt.getText().isEmpty()){
++            JOptionPane.showMessageDialog(this,"Enter Your Name");
++        }else{
++            Name=nameTxt.getText();
++            new Rules(Name).setVisible(true);
++            nameTxt.setText("");
++            this.dispose();
++        }
++    }//GEN-LAST:event_jButton1MouseClicked
++
++    /**
++     * @param args the command line arguments
++     */
++    public static void main(String args[]) {
++        /* Set the Nimbus look and feel */
++        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
++        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
++         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
++         */
++        try {
++            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
++                if ("Nimbus".equals(info.getName())) {
++                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
++                    break;
++                }
++            }
++        } catch (ClassNotFoundException ex) {
++            java.util.logging.Logger.getLogger(Wlcm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (InstantiationException ex) {
++            java.util.logging.Logger.getLogger(Wlcm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (IllegalAccessException ex) {
++            java.util.logging.Logger.getLogger(Wlcm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
++            java.util.logging.Logger.getLogger(Wlcm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
++        }
++        //</editor-fold>
++
++        /* Create and display the form */
++        java.awt.EventQueue.invokeLater(new Runnable() {
++            public void run() {
++                new Wlcm().setVisible(true);
++            }
++        });
++    }
++
++    // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JLabel jLabel2;
++    private javax.swing.JLabel jLabel3;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JTextField nameTxt;
++    // End of variables declaration//GEN-END:variables
++}
